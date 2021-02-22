@@ -34,6 +34,7 @@ namespace EF.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EF.API", Version = "v1" });
             });
+            //Aktivera databasen
             services.AddDbContext<TrackContext>(options =>
             options.UseSqlite(Configuration.GetConnectionString("DefaultDbString")));
         }
